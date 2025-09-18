@@ -10,6 +10,7 @@
 - [x] crear proyecto CSS
 - [x] instalar eslint
 - [x] instalar primeng
+- [x] instalar tailwind
 - [ ] instalar mapbox para front
 - [ ] instalar chartjs? - dentro de primeng
 - [ ] instalar FullCalendar?
