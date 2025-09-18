@@ -7,9 +7,9 @@
 
 ## FRONT
 
-- [ ] crear proyecto CSS
-- [ ] instalar eslint
-- [ ] instalar primeng
+- [x] crear proyecto CSS
+- [x] instalar eslint
+- [x] instalar primeng
 - [ ] instalar mapbox para front
 - [ ] instalar chartjs? - dentro de primeng
 - [ ] instalar FullCalendar?
