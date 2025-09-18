@@ -1,8 +1,8 @@
-# IT-S8-Inprocode
+# IT-S8-Calendar-Chart-Map
 
 ## 🗂️Tabla de contenidos
 
-- [IT-S8-Inprocode](#it-s8-inprocode)
+- [IT-S8-Calendar-Chart-Map](#it-s8-calendar-chart-map)
   - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
   - [📄Descripción](#descripción)
     - [1. Ejercicio 1](#1-ejercicio-1)
