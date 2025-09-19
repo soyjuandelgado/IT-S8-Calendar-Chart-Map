@@ -1,18 +1,14 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query, Req } from '@nestjs/common';
 import { UsersService } from './users.service';
+import type { Request } from 'express';
 
 @Controller('users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
   @Get()
-  findAll(@Query('order') order: string) {
-    let params: string[] = [];
-
-    if (order !== undefined) {
-      params.push(`'${order}'`);
-    }
-    return this.usersService.findAll(params);
+  findAll(@Req() request: Request) {
+    return this.usersService.findAll(request.query);
   }
 
   @Get(':userId')

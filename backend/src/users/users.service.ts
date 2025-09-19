@@ -3,9 +3,17 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class UsersService {
   findAll(params): any {
-    return params.length > 0
-    ? `findAll funcionando con ${params}`
-    :'findAll funcionando';
+    let msg = `findAll funcionando. Parámetros:`;
+
+    if (params.order !== undefined) {
+      msg = msg + ` order: ${params.order}`;
+    }
+
+    if (params.limit !== undefined) {
+      msg = msg + ` limit: ${params.limit}`;
+    }
+
+    return msg;
   }
 
   find(userId: string): any {
