@@ -2,23 +2,25 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class UsersService {
-  findAll(): any {
-    return 'findAll funcionando';
+  findAll(params): any {
+    return params.length > 0
+    ? `findAll funcionando con ${params}`
+    :'findAll funcionando';
   }
 
-  find(userId: number): any {
-    return 'find funcionando: ' + userId;
+  find(userId: string): any {
+    return `find funcionando: ${userId}`;
   }
 
   create(user: number): any {
-    return 'new funcionando: ' + user;
+    return `new funcionando: ${user}`;
   }
 
-  delete(userId: number): any {
-    return 'delete funcionando: ' + userId;
+  delete(userId: string): any {
+    return `delete funcionando: ${userId}`;
   }
 
   update(user: number): any {
-    return 'update funcionando: ' + user;
+    return `update funcionando: ${user}`;
   }
 }

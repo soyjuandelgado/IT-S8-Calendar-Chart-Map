@@ -19,6 +19,7 @@
     - [8. Instalación de Chart.js](#8-instalación-de-chartjs)
     - [9. Instalación de FullCalendar](#9-instalación-de-fullcalendar)
     - [10. Instalación de Nest.js](#10-instalación-de-nestjs)
+    - [11. Instalación de Express.js](#11-instalación-de-expressjs)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
@@ -152,6 +153,14 @@ npm install chart.js
 ```bash
 npm i -g @nestjs/cli
 ```
+
+### 11. Instalación de Express.js
+
+```bash
+npm install express
+```
+
+
 
 
 
