@@ -20,7 +20,6 @@ export class MapboxMap  implements OnInit, OnDestroy{
       this.map = new mapboxgl.Map({
         accessToken: 'pk.eyJ1Ijoic295anVhbmRlbGdhZG8iLCJhIjoiY21mbWZ6ZmFzMDF0djJqcXp5MmF6bnkxeiJ9.4MxEetjDrbZZsM2zPp0gDw',
         container: this.mapContainer.nativeElement, // Reference to the map container element
-        // center: [-98.54818, 40.00811], // Center coordinates for map over the continental US
         center: [2.1779518808122282, 41.38825990604182], //Barcelona
         zoom: 12, // Initial zoom level
       });
