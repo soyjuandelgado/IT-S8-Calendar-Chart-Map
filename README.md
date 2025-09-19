@@ -82,6 +82,21 @@ npm install
 npm install -g @angular/cli
 ```
 
+### 4. Instalación de PrimeNG
+
+### 5. Instalación de Tailwind
+
+### 6. Instalación de Plugin PrimeNg-Tailwind
+
+### 7. Instalación de MapBox
+
+```bash
+npm install mapbox-gl
+```
+
+
+
+
 ### 4. Instalación de Angular Material
 
 ```shell
