@@ -5,7 +5,7 @@
 - [IT-S8-Calendar-Chart-Map](#it-s8-calendar-chart-map)
   - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
   - [📄Descripción](#descripción)
-    - [1. Ejercicio 1](#1-ejercicio-1)
+    - [1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa](#1-crear-componentes-menú-home-calendario-gráfico-y-mapa)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
@@ -29,17 +29,29 @@
 
 PENDIENTE
 
-### 1. Ejercicio 1
+### 1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa
 
-- PENDIENTE
+- Instalación y configuración de todos los componentes.
+- Creación y formato del menú principal.
+- Creación y formato inicial de todas las páginas.
+- Configuración de las rutas.
+- Añadir tarjetas enrutadas en la página principal.
+- Añadir calendario de prueba en la página de calendario.
+- Añadir gráfico de prueba en la página de gráficos.
+- Añadir mapa de prueba en la página de mapa.
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
-  <img src="public/ex2.png" width="300" style="vertical-align: top;">
-  <img src="public/ex2-similar.png" width="300" style="vertical-align: top;">
-  <img src="public/ex2-recommendations.png" width="300" style="vertical-align: top;">
+  <img src="frontend/public/ex1-home.png" width="300" style="vertical-align: top;">
+  <img src="frontend/public/ex1-home-mobile.png" width="100" style="vertical-align: top;">
+  <img src="frontend/public/ex1-calendar.png" width="300" style="vertical-align: top;">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="frontend/public/ex1-chart.png" width="300" style="vertical-align: top;">
+  <img src="frontend/public/ex1-map.png" width="300" style="vertical-align: top;">
+  <img src="frontend/public/ex1-map-mobile.png" width="100" style="vertical-align: top;">
 </div>
 
-<img src="public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
+<img src="frontend/public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 
@@ -52,6 +64,7 @@ PENDIENTE
 - [x] Eslint
 - [x] Karma / Jasmine
 - [x] PrimeNG
+- [x] Tailwind
 - [x] MapBox
 - [x] Chart.js
 - [x] FullCalendar
