@@ -19,11 +19,12 @@
     - [8. Instalación de Chart.js](#8-instalación-de-chartjs)
     - [9. Instalación de FullCalendar](#9-instalación-de-fullcalendar)
     - [10. Instalación de Nest.js](#10-instalación-de-nestjs)
-    - [4. Instalación de Angular Material](#4-instalación-de-angular-material)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
-    - [Testing](#testing)
+    - [Frontend](#frontend)
+      - [Testing](#testing)
+    - [Backend](#backend)
   - [📸 Demo](#-demo)
 
 ## 📄Descripción
@@ -155,12 +156,6 @@ npm i -g @nestjs/cli
 
 
 
-### 4. Instalación de Angular Material
-
-```shell
-ng add @angular/material
-```
-
 ### 5. Instalación de Firebase
 
 ```shell
@@ -194,14 +189,22 @@ ng update @angular/cli @angular/core
 
 ## ▶️Ejecución
 
+### Frontend
+
 ```shell
 ng serve -o
 ```
 
-### Testing
+#### Testing
 
 ```shell
 ng test
+```
+
+### Backend
+
+```shell
+npm run start
 ```
 
 ## 📸 Demo
