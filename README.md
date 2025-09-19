@@ -18,6 +18,7 @@
     - [7. Instalación de MapBox](#7-instalación-de-mapbox)
     - [8. Instalación de Chart.js](#8-instalación-de-chartjs)
     - [9. Instalación de FullCalendar](#9-instalación-de-fullcalendar)
+    - [10. Instalación de Nest.js](#10-instalación-de-nestjs)
     - [4. Instalación de Angular Material](#4-instalación-de-angular-material)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
@@ -68,7 +69,7 @@ PENDIENTE
 - [x] MapBox
 - [x] Chart.js
 - [x] FullCalendar
-- Firebase
+- [x] Nest.js
 
 ## 📋Requisitos
 
@@ -143,6 +144,12 @@ npm install chart.js
 
 ```bash
    npm install @fullcalendar/angular @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction
+```
+
+### 10. Instalación de Nest.js
+
+```bash
+npm i -g @nestjs/cli
 ```
 
 

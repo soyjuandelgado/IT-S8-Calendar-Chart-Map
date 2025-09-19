@@ -3,7 +3,7 @@
 ## BACK
 
 - [ ] crear proyecto diferente para back
-- [ ] instalar nest para back: utiliza express
+- [x] instalar nest para back: utiliza express
 
 ## FRONT
 
@@ -13,7 +13,7 @@
 - [x] instalar tailwind
 - [x] instalar mapbox para front
 - [x] instalar chartjs? - dentro de primeng
-- [ ] instalar FullCalendar?
+- [x] instalar FullCalendar
 - [ ] configurar vercel para ejecutar ambos proyectos
 - [ ] css
   - [ ] fuentes
