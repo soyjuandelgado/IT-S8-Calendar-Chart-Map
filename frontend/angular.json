@@ -22,10 +22,12 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/app/shared/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/mapbox-gl/dist/mapbox-gl.css"
             ]
           },
           "configurations": {
