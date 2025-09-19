@@ -22,7 +22,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/app/shared/assets"
             ],
             "styles": [
               "src/styles.css",

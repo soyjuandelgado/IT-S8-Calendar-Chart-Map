@@ -1,1 +1,39 @@
-<p>home works!</p>
+<section class="section-container">
+    <h1>Home</h1>
+    <p>Which component will you choose?</p>
+    <article class="card-container">
+        <p-card class="option-card">
+            <ng-template #header>
+                <!-- <i class="pi pi-calendar" style="font-size: 20rem;"></i> -->
+                <img class="card-image" alt="Calendar" src="calendario.webp" />
+            </ng-template>
+            <ng-template #title>Calendar</ng-template>
+            <ng-template #subtitle>Scheduling in two clicks!</ng-template>
+            <ng-template #footer>
+                <p-button label="Show" severity="info" routerLink="/calendar"/>
+            </ng-template>
+        </p-card>
+        <p-card class="option-card">
+            <ng-template #header>
+                <!-- <i class="pi pi-chart-bar" style="font-size: 20rem;"></i> -->
+                <img class="card-image" alt="Charts" src="grafico.jpg" />
+            </ng-template>
+            <ng-template #title>Charts</ng-template>
+            <ng-template #subtitle>Colorful data graphics.</ng-template>
+            <ng-template #footer>
+                <p-button label="Show" severity="info" routerLink="/chart"/>
+            </ng-template>
+        </p-card>
+        <p-card class="option-card">
+            <ng-template #header>
+                <!-- <i class="pi pi-map" style="font-size: 20rem;"></i> -->
+                <img class="card-image" alt="Map" src="mapas.webp" />
+            </ng-template>
+            <ng-template #title>Map</ng-template>
+            <ng-template #subtitle>Locate anything you want.</ng-template>
+            <ng-template #footer>
+                <p-button label="Show" severity="info" routerLink="/map"/>
+            </ng-template>
+        </p-card>
+    </article>
+</section>
