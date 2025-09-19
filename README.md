@@ -12,6 +12,11 @@
     - [1. Descargar el repositorio](#1-descargar-el-repositorio)
     - [2. Instalación de paquetes Node.js](#2-instalación-de-paquetes-nodejs)
     - [3. Instalación de Angular](#3-instalación-de-angular)
+    - [4. Instalación de PrimeNG](#4-instalación-de-primeng)
+    - [5. Instalación de Tailwind](#5-instalación-de-tailwind)
+    - [6. Instalación de Plugin PrimeNg-Tailwind](#6-instalación-de-plugin-primeng-tailwind)
+    - [7. Instalación de MapBox](#7-instalación-de-mapbox)
+    - [8. Instalación de Chart.js](#8-instalación-de-chartjs)
     - [4. Instalación de Angular Material](#4-instalación-de-angular-material)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
@@ -92,6 +97,12 @@ npm install -g @angular/cli
 
 ```bash
 npm install mapbox-gl
+```
+
+### 8. Instalación de Chart.js
+
+```bash
+npm install chart.js
 ```
 
 
