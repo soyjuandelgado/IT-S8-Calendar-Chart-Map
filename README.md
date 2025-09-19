@@ -90,9 +90,29 @@ npm install -g @angular/cli
 
 ### 4. Instalación de PrimeNG
 
+```bash
+npm install primeng @primeuix/themes
+npm install primeng primeicons primeflex
+```
+
+Si no funciona, actualizar el CLI de Angular:
+
+```bash
+npm install -g @angular/cli@latest
+ng update @angular/cli @angular/core
+```
+
 ### 5. Instalación de Tailwind
 
+```bash
+npm install tailwindcss @tailwindcss/postcss postcss --force
+```
+
 ### 6. Instalación de Plugin PrimeNg-Tailwind
+
+```bash
+npm i tailwindcss-primeui
+```
 
 ### 7. Instalación de MapBox
 
