@@ -6,7 +6,10 @@
   - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
   - [📄Descripción](#descripción)
     - [1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa](#1-crear-componentes-menú-home-calendario-gráfico-y-mapa)
+    - [2. Crear base de datos con operaciones CRUD](#2-crear-base-de-datos-con-operaciones-crud)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
+    - [Frontend](#frontend)
+    - [BackEnd](#backend)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
     - [1. Descargar el repositorio](#1-descargar-el-repositorio)
@@ -24,9 +27,9 @@
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
-    - [Frontend](#frontend)
+    - [Frontend](#frontend-1)
       - [Testing](#testing)
-    - [Backend](#backend)
+    - [Backend](#backend-1)
   - [📸 Demo](#-demo)
 
 ## 📄Descripción
@@ -55,11 +58,30 @@ PENDIENTE
   <img src="frontend/public/ex1-map-mobile.png" width="100" style="vertical-align: top;">
 </div>
 
+### 2. Crear base de datos con operaciones CRUD
+
+- Crear nuevo proyecto con Nest.js.
+- Crear API.
+- Crear controlador de usuarios.
+- Crear servicio de usuarios.
+- Crear DTO de usuarios.
+- Crear clase de usuarios.
+- Crear entidad de usuarios.
+- Conectar con Base de Datos MySQL.
+- Crear modulo de usuarios.
+- Crear variables de entorno.
+- Crear servicio de configuracion para variables de entorno.
+- Usar Base de Datos en Docker para guardar datos.
+- Comprobacion de la API con Postman.
+- Documentar API con Swagger
+
 <img src="frontend/public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 
 PENDIENTE
+
+### Frontend
 
 - [x] HTML
 - [x] CSS
@@ -72,8 +94,14 @@ PENDIENTE
 - [x] MapBox
 - [x] Chart.js
 - [x] FullCalendar
+
+### BackEnd
+
+- [x] Typescript
+- [x] Eslint
 - [x] Nest.js
 - [x] TypeORM
+- [ ] Jest
 
 ## 📋Requisitos
 
