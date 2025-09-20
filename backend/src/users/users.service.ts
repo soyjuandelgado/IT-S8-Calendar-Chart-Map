@@ -20,15 +20,27 @@ export class UsersService {
     return `find funcionando: ${userId}`;
   }
 
-  create(user: number): any {
-    return `new funcionando: ${user}`;
+  create(user: any): any {
+    return user;
   }
 
   delete(userId: string): any {
     return `delete funcionando: ${userId}`;
   }
 
-  update(user: number): any {
-    return `update funcionando: ${user}`;
+  update(userId: string, user: any): any {
+    return user;
   }
 }
+
+// ID, First, Last, Email, Phone, Location, Hobby
+
+// {
+//     "ID": 5,
+//     "first": "Juan",
+//     "Last": "Delgado",
+//     "email": "soyjuandelgado@gmail.com",
+//     "phone": "666666666",
+//     "location": "Mataró, Barcelona, Spain",
+//     "hobby": "read"
+// }

@@ -1,4 +1,14 @@
-import { Controller, Get, Param, Query, Req } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  Post,
+  Query,
+  Req,
+  Body,
+  Delete,
+  Put,
+} from '@nestjs/common';
 import { UsersService } from './users.service';
 import type { Request } from 'express';
 
@@ -14,5 +24,22 @@ export class UsersController {
   @Get(':userId')
   find(@Param('userId') userId: string) {
     return this.usersService.find(userId);
+  }
+
+  @Post()
+  create(@Body() body) {
+    const user: any = body;
+    return this.usersService.create(user);
+  }
+
+  @Delete(':userId')
+  delete(@Param('userId') userId: string) {
+    return this.usersService.delete(userId);
+  }
+
+  @Put(':userId')
+  update(@Param("userId") userId: string, @Body() body){
+    const user: any = body;
+    return this.usersService.update(userId, user);
   }
 }
