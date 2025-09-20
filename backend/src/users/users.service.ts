@@ -1,57 +1,45 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { UserDto } from './user.dto';
-import { User } from './user.class';
+import { User } from './user.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class UsersService {
-  users: User[] = [
-    {
-      id: 1,
-      first: 'Juan',
-      last: 'Delgado',
-      email: 'soy.juan.delgado@gmail.com',
-      phone: '666957457',
-      location: 'Mataró, Barcelona, Spain',
-      hobby: 'read',
-    },
-    {
-      id: 2,
-      first: 'David',
-      last: 'del Molino',
-      email: 'daviddmt@gmail.com',
-      phone: '676242737',
-      location: 'Premiá de Mar, Barcelona, Spain',
-      hobby: 'music',
-    },
-  ];
+  constructor(
+    @InjectRepository(User) private usersRepository: Repository<User>,
+  ) {}
 
-  findAll(params): User[] {
-    return this.users;
+  async findAll(params): Promise<User[]> {
+    return await this.usersRepository.find();
   }
 
-  find(userId: string): User {
-    return this.users[parseInt(userId) - 1];
-  }
-
-  create(newUser: UserDto): User {
-    const user = new User();
-
-    user.id = 99;
-    user.first = newUser.first;
-    user.last = newUser.last;
-    user.email = newUser.email;
-    user.phone = newUser.phone;
-    user.location = newUser.location;
-    user.hobby = newUser.hobby;
-
+  async find(userId: string): Promise<User> {
+    const user = await this.usersRepository.findOne({
+      where: { id: parseInt(userId) },
+    });
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
     return user;
   }
 
-  delete(userId: string): User {
-    return this.users[parseInt(userId) - 1];
+  create(newUser: UserDto): Promise<User> {
+    return this.usersRepository.save(newUser);
   }
 
-  update(userId: string, newUser: UserDto): User {
-    return this.users[parseInt(userId) - 1];
+  async delete(userId: string): Promise<any> {
+    return this.usersRepository.delete({ id: parseInt(userId) });
+  }
+
+  async update(userId: string, newUser: UserDto): Promise<User> {
+    const toUpdate = await this.usersRepository.findOne({
+      where: { id: parseInt(userId) },
+    });
+    if (!toUpdate) {
+      throw new NotFoundException('User not found');
+    }
+    const updated = Object.assign(toUpdate, newUser);
+    return this.usersRepository.save(updated);
   }
 }
