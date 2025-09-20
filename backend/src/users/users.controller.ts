@@ -11,6 +11,7 @@ import {
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import type { Request } from 'express';
+import { UserDto } from './user.dto';
 
 @Controller('users')
 export class UsersController {
@@ -27,8 +28,7 @@ export class UsersController {
   }
 
   @Post()
-  create(@Body() body) {
-    const user: any = body;
+  create(@Body() user: UserDto) {
     return this.usersService.create(user);
   }
 
@@ -38,8 +38,7 @@ export class UsersController {
   }
 
   @Put(':userId')
-  update(@Param("userId") userId: string, @Body() body){
-    const user: any = body;
+  update(@Param("userId") userId: string, @Body() user: UserDto){
     return this.usersService.update(userId, user);
   }
 }
