@@ -6,7 +6,10 @@
   - [🗂️Tabla de contenidos](#️tabla-de-contenidos)
   - [📄Descripción](#descripción)
     - [1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa](#1-crear-componentes-menú-home-calendario-gráfico-y-mapa)
+    - [2. Crear base de datos con operaciones CRUD](#2-crear-base-de-datos-con-operaciones-crud)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
+    - [Frontend](#frontend)
+    - [BackEnd](#backend)
   - [📋Requisitos](#requisitos)
   - [🛠️Instalación](#️instalación)
     - [1. Descargar el repositorio](#1-descargar-el-repositorio)
@@ -18,11 +21,16 @@
     - [7. Instalación de MapBox](#7-instalación-de-mapbox)
     - [8. Instalación de Chart.js](#8-instalación-de-chartjs)
     - [9. Instalación de FullCalendar](#9-instalación-de-fullcalendar)
-    - [4. Instalación de Angular Material](#4-instalación-de-angular-material)
+    - [10. Instalación de Nest.js](#10-instalación-de-nestjs)
+    - [11. Instalación de Express.js](#11-instalación-de-expressjs)
+    - [12. Instalar TypeORM](#12-instalar-typeorm)
+    - [13. Instalar Swagger](#13-instalar-swagger)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
-    - [Testing](#testing)
+    - [Frontend](#frontend-1)
+      - [Testing](#testing)
+    - [Backend](#backend-1)
   - [📸 Demo](#-demo)
 
 ## 📄Descripción
@@ -51,11 +59,30 @@ PENDIENTE
   <img src="frontend/public/ex1-map-mobile.png" width="100" style="vertical-align: top;">
 </div>
 
-<img src="frontend/public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
+### 2. Crear base de datos con operaciones CRUD
+
+- Crear nuevo proyecto con Nest.js.
+- Crear API.
+- Crear controlador de usuarios.
+- Crear servicio de usuarios.
+- Crear DTO de usuarios.
+- Crear clase de usuarios.
+- Crear entidad de usuarios.
+- Conectar con Base de Datos MySQL.
+- Crear modulo de usuarios.
+- Crear variables de entorno.
+- Crear servicio de configuracion para variables de entorno.
+- Usar Base de Datos en Docker para guardar datos.
+- Comprobacion de la API con Postman.
+- Documentar API con Swagger
+
+<img src="frontend/public/ex2.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 
 PENDIENTE
+
+### Frontend
 
 - [x] HTML
 - [x] CSS
@@ -68,7 +95,15 @@ PENDIENTE
 - [x] MapBox
 - [x] Chart.js
 - [x] FullCalendar
-- Firebase
+
+### BackEnd
+
+- [x] Typescript
+- [x] Eslint
+- [x] Nest.js
+- [x] TypeORM
+- [x] Swagger
+- [ ] Jest
 
 ## 📋Requisitos
 
@@ -145,14 +180,31 @@ npm install chart.js
    npm install @fullcalendar/angular @fullcalendar/core @fullcalendar/daygrid @fullcalendar/interaction
 ```
 
+### 10. Instalación de Nest.js
 
-
-
-### 4. Instalación de Angular Material
-
-```shell
-ng add @angular/material
+```bash
+npm i -g @nestjs/cli
 ```
+
+### 11. Instalación de Express.js
+
+```bash
+npm install express
+```
+
+### 12. Instalar TypeORM
+
+```bash
+npm install --save @nestjs/typeorm typeorm mysql
+```
+
+### 13. Instalar Swagger
+
+```bash
+npm install --save @nestjs/swagger swagger-ui-express
+```
+
+
 
 ### 5. Instalación de Firebase
 
@@ -187,14 +239,22 @@ ng update @angular/cli @angular/core
 
 ## ▶️Ejecución
 
+### Frontend
+
 ```shell
 ng serve -o
 ```
 
-### Testing
+#### Testing
 
 ```shell
 ng test
+```
+
+### Backend
+
+```shell
+npm run start
 ```
 
 ## 📸 Demo
