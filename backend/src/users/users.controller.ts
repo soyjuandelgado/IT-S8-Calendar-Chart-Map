@@ -12,33 +12,34 @@ import {
 import { UsersService } from './users.service';
 import type { Request } from 'express';
 import { UserDto } from './user.dto';
+import { User } from './user.class';
 
 @Controller('users')
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
   @Get()
-  findAll(@Req() request: Request) {
+  findAll(@Req() request: Request): User[] {
     return this.usersService.findAll(request.query);
   }
 
   @Get(':userId')
-  find(@Param('userId') userId: string) {
+  find(@Param('userId') userId: string): User {
     return this.usersService.find(userId);
   }
 
   @Post()
-  create(@Body() user: UserDto) {
-    return this.usersService.create(user);
+  create(@Body() newUser: UserDto): User {
+    return this.usersService.create(newUser);
   }
 
   @Delete(':userId')
-  delete(@Param('userId') userId: string) {
+  delete(@Param('userId') userId: string): User {
     return this.usersService.delete(userId);
   }
 
   @Put(':userId')
-  update(@Param("userId") userId: string, @Body() user: UserDto){
-    return this.usersService.update(userId, user);
+  update(@Param('userId') userId: string, @Body() newUser: UserDto): User {
+    return this.usersService.update(userId, newUser);
   }
 }

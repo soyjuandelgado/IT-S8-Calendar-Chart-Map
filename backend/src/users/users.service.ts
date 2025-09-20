@@ -1,47 +1,57 @@
 import { Injectable } from '@nestjs/common';
 import { UserDto } from './user.dto';
+import { User } from './user.class';
 
 @Injectable()
 export class UsersService {
-  findAll(params): any {
-    let msg = `findAll funcionando. Parámetros:`;
+  users: User[] = [
+    {
+      id: 1,
+      first: 'Juan',
+      last: 'Delgado',
+      email: 'soy.juan.delgado@gmail.com',
+      phone: '666957457',
+      location: 'Mataró, Barcelona, Spain',
+      hobby: 'read',
+    },
+    {
+      id: 2,
+      first: 'David',
+      last: 'del Molino',
+      email: 'daviddmt@gmail.com',
+      phone: '676242737',
+      location: 'Premiá de Mar, Barcelona, Spain',
+      hobby: 'music',
+    },
+  ];
 
-    if (params.order !== undefined) {
-      msg = msg + ` order: ${params.order}`;
-    }
-
-    if (params.limit !== undefined) {
-      msg = msg + ` limit: ${params.limit}`;
-    }
-
-    return msg;
+  findAll(params): User[] {
+    return this.users;
   }
 
-  find(userId: string): any {
-    return `find funcionando: ${userId}`;
+  find(userId: string): User {
+    return this.users[parseInt(userId) - 1];
   }
 
-  create(user: UserDto): UserDto {
+  create(newUser: UserDto): User {
+    const user = new User();
+
+    user.id = 99;
+    user.first = newUser.first;
+    user.last = newUser.last;
+    user.email = newUser.email;
+    user.phone = newUser.phone;
+    user.location = newUser.location;
+    user.hobby = newUser.hobby;
+
     return user;
   }
 
-  delete(userId: string): any {
-    return `delete funcionando: ${userId}`;
+  delete(userId: string): User {
+    return this.users[parseInt(userId) - 1];
   }
 
-  update(userId: string, user: UserDto): UserDto {
-    return user;
+  update(userId: string, newUser: UserDto): User {
+    return this.users[parseInt(userId) - 1];
   }
 }
-
-// ID, First, Last, Email, Phone, Location, Hobby
-
-// {
-//     "ID": 5,
-//     "first": "Juan",
-//     "Last": "Delgado",
-//     "email": "soyjuandelgado@gmail.com",
-//     "phone": "666666666",
-//     "location": "Mataró, Barcelona, Spain",
-//     "hobby": "read"
-// }
