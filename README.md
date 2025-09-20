@@ -24,6 +24,7 @@
     - [10. Instalación de Nest.js](#10-instalación-de-nestjs)
     - [11. Instalación de Express.js](#11-instalación-de-expressjs)
     - [12. Instalar TypeORM](#12-instalar-typeorm)
+    - [13. Instalar Swagger](#13-instalar-swagger)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
@@ -101,6 +102,7 @@ PENDIENTE
 - [x] Eslint
 - [x] Nest.js
 - [x] TypeORM
+- [x] Swagger
 - [ ] Jest
 
 ## 📋Requisitos
@@ -194,6 +196,12 @@ npm install express
 
 ```bash
 npm install --save @nestjs/typeorm typeorm mysql
+```
+
+### 13. Instalar Swagger
+
+```bash
+npm install --save @nestjs/swagger swagger-ui-express
 ```
 
 
