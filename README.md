@@ -76,7 +76,7 @@ PENDIENTE
 - Comprobacion de la API con Postman.
 - Documentar API con Swagger
 
-<img src="frontend/public/ex3.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
+<img src="frontend/public/ex2.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 
