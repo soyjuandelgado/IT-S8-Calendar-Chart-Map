@@ -163,6 +163,7 @@ npm install express
 ```
 
 ### 12. Instalar TypeORM
+
 ```bash
 npm install --save @nestjs/typeorm typeorm mysql
 ```
