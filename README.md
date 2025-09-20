@@ -20,6 +20,7 @@
     - [9. Instalación de FullCalendar](#9-instalación-de-fullcalendar)
     - [10. Instalación de Nest.js](#10-instalación-de-nestjs)
     - [11. Instalación de Express.js](#11-instalación-de-expressjs)
+    - [12. Instalar TypeORM](#12-instalar-typeorm)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
@@ -72,6 +73,7 @@ PENDIENTE
 - [x] Chart.js
 - [x] FullCalendar
 - [x] Nest.js
+- [x] TypeORM
 
 ## 📋Requisitos
 
@@ -160,8 +162,10 @@ npm i -g @nestjs/cli
 npm install express
 ```
 
-
-
+### 12. Instalar TypeORM
+```bash
+npm install --save @nestjs/typeorm typeorm mysql
+```
 
 
 
