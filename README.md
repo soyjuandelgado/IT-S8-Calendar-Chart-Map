@@ -32,6 +32,7 @@
       - [Testing](#testing)
     - [Backend](#backend-1)
   - [📸 Demo](#-demo)
+    - [Documentación API](#documentación-api)
 
 ## 📄Descripción
 
@@ -260,3 +261,7 @@ npm run start
 ## 📸 Demo
 
 Visitar la web: [Web](https://it-s8-calendar-chart-map.vercel.app/)
+
+### Documentación API
+
+[Swagger](http://localhost:3000/docs)

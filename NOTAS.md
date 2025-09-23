@@ -26,7 +26,7 @@
   - [ ] colores
 - [ ] instalar playwright (se puede ejecutar ng e2e!)
 - [ ] crear pantalla de CRUD
-- [ ] cargar datos BD
+- [ ] cargar datos BD mediante API
 
 - [x] crear rutas de los componentes
 - [x] añadir enlaces en el menu

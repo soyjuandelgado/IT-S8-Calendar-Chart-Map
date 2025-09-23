@@ -23,11 +23,11 @@ class ConfigService {
     return {
       type: 'mysql',
 
-      host: this.getValue('TUTORIAL_HOST'),
-      port: parseInt(this.getValue('TUTORIAL_PORT')),
-      username: this.getValue('TUTORIAL_USER'),
-      password: this.getValue('TUTORIAL_PASSWORD'),
-      database: this.getValue('TUTORIAL_DATABASE'),
+      host: this.getValue('MEETINGS_HOST'),
+      port: parseInt(this.getValue('MEETINGS_PORT')),
+      username: this.getValue('MEETINGS_USER'),
+      password: this.getValue('MEETINGS_PASSWORD'),
+      database: this.getValue('MEETINGS_DATABASE'),
 
       entities: ['dist/**/*.entity.js'],
       synchronize: true,
@@ -36,11 +36,11 @@ class ConfigService {
 }
 
 const configService = new ConfigService(process.env).ensureValues([
-  'TUTORIAL_HOST',
-  'TUTORIAL_PORT',
-  'TUTORIAL_USER',
-  'TUTORIAL_PASSWORD',
-  'TUTORIAL_DATABASE',
+  'MEETINGS_HOST',
+  'MEETINGS_PORT',
+  'MEETINGS_USER',
+  'MEETINGS_PASSWORD',
+  'MEETINGS_DATABASE',
 ]);
 
 export { configService };
