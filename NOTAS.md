@@ -4,6 +4,12 @@
 
 - [x] crear proyecto diferente para back
 - [x] instalar nest para back: utiliza express
+- [ ] dockerizar nest
+- [ ] desplegar en ECS https://aws.amazon.com/es/ecs/
+- [ ] unir bd y nest con docker compose
+- [ ] crear bd con datos de ejemplo (SIT)
+- [ ] vigilar con variables de entrono para que no queden expuestas
+- [ ] se puede hacer deploy en firebase. primero hay que hacer el build del proyecto.
 
 ## FRONT
 
@@ -20,6 +26,7 @@
   - [ ] colores
 - [ ] instalar playwright (se puede ejecutar ng e2e!)
 - [ ] crear pantalla de CRUD
+- [ ] cargar datos BD
 
 - [x] crear rutas de los componentes
 - [x] añadir enlaces en el menu
