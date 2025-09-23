@@ -2,7 +2,7 @@
 
 ## BACK
 
-- [ ] crear proyecto diferente para back
+- [x] crear proyecto diferente para back
 - [x] instalar nest para back: utiliza express
 
 ## FRONT
@@ -19,6 +19,7 @@
   - [ ] fuentes
   - [ ] colores
 - [ ] instalar playwright (se puede ejecutar ng e2e!)
+- [ ] crear pantalla de CRUD
 
-- [ ] crear rutas de los componentes
-- [ ] añadir enlaces en el menu
+- [x] crear rutas de los componentes
+- [x] añadir enlaces en el menu

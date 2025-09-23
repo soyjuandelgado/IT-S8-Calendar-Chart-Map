@@ -17,6 +17,7 @@ export class Calendar {
     events: [
       { title: 'Evento 1', date: '2025-09-17' },
       { title: 'Evento 2', date: '2025-09-18' },
+      { title: 'Evento 3', date: '2025-09-19' }
     ],
   };
 }

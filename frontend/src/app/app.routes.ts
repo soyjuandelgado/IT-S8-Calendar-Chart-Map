@@ -3,6 +3,7 @@ import { Home } from './home/home';
 import { Calendar } from './calendar/calendar';
 import { Chart } from './chart/chart';
 import { Map } from './map/map';
+import { Users } from './users/users';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'map',
     component: Map,
+  },
+  {
+    path: 'users',
+    component: Users,
   },
   { 
     path: '**', 
