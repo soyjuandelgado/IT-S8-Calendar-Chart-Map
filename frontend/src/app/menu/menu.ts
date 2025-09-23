@@ -34,9 +34,9 @@ export class Menu implements OnInit{
                 routerLink: '/map'
             },
             {
-                label: 'Users',
-                icon: 'pi pi-users',
-                routerLink: '/users'
+                label: 'Meetings',
+                icon: 'pi pi-briefcase',
+                routerLink: '/meetings'
             },
         ]
     }      

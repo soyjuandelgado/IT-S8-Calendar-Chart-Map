@@ -1,0 +1,26 @@
+<section class="section-container">
+    <h1>Meetings</h1>
+    <p>Meetings text</p>
+    <p-table [value]="meetings" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template #header>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
+                <th>Actions</th>
+            </tr>
+        </ng-template>
+        <ng-template #body let-meeting>
+            <tr>
+                <td>{{ meeting.name }}</td>
+                <td>{{ meeting.phone }}</td>
+                <td>{{ meeting.date }}</td>
+                <td>{{ meeting.longitude }}</td>
+                <td>{{ meeting.latitude }}</td>
+                <td><p-button>Edit</p-button><p-button>Delete</p-button></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</section>
