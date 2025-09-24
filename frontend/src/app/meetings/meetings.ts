@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { TableModule } from 'primeng/table';
 import { Button } from "primeng/button";
-import { DialogForm } from '../dialog-form/dialog-form';
+import { DialogForm } from '../shared/components/dialog-form/dialog-form';
 @Component({
   selector: 'app-meetings',
   imports: [TableModule, Button, DialogForm],
