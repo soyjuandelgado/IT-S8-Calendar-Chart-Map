@@ -5,6 +5,14 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
+
+  // Habilitar CORS con opciones específicas
+  app.enableCors({
+    origin: 'http://localhost:4200', // El origen de tu aplicación de Angular
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+  });
+
   // Configurar títulos de documnentación
   const options = new DocumentBuilder()
     .setTitle('Users REST API')
