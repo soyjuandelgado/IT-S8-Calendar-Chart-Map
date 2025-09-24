@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { TableModule } from 'primeng/table';
 import { Button } from "primeng/button";
-
+import { DialogForm } from '../dialog-form/dialog-form';
 @Component({
   selector: 'app-meetings',
-  imports: [TableModule, Button],
+  imports: [TableModule, Button, DialogForm],
   templateUrl: './meetings.html',
   styleUrl: './meetings.css'
 })
 export class Meetings {
 
+  @ViewChild('dialogForm') dialogForm!: DialogForm;
   meetings = [
     {
         id: 1,
@@ -28,5 +29,9 @@ export class Meetings {
         latitude: 41.43671281
     }
   ]
+
+  showForm(){
+    this.dialogForm.showDialog();
+  }
 
 }
