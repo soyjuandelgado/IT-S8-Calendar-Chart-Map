@@ -1,34 +1,19 @@
-import { Component, inject, OnInit, signal, ViewChild } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { TableModule } from 'primeng/table';
 import { Button } from 'primeng/button';
 import { DialogForm } from '../shared/components/dialog-form/dialog-form';
-import { MeetingsApiService } from '../shared/services/meetings-api-service';
-import { IMeeting } from '../shared/models/imeeting';
+import { MeetingsService } from '../shared/services/meetings-service';
 @Component({
   selector: 'app-meetings',
   imports: [TableModule, Button, DialogForm],
   templateUrl: './meetings.html',
   styleUrl: './meetings.css',
 })
-export class Meetings implements OnInit {
+export class Meetings {
   @ViewChild('dialogForm') dialogForm!: DialogForm;
-  api = inject(MeetingsApiService);
-  meetings = signal<IMeeting[]>([]);
+  service = inject(MeetingsService);
+  meetings = this.service.meetings;
 
-  ngOnInit() {
-    this.getMeetings();
-  }
-
-  getMeetings(): void {
-    this.api.getMeetings$().subscribe({
-      next: (response) => {
-        this.meetings.set(response);
-      },
-      error: (err) => {
-        console.error('Error al obtener reuniones', err);
-      },
-    });
-  }
 
   showForm() {
     this.dialogForm.showDialog();
