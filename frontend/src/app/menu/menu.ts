@@ -19,6 +19,11 @@ export class Menu implements OnInit{
                 routerLink: '/home'
             },
             {
+                label: 'Meetings',
+                icon: 'pi pi-briefcase',
+                routerLink: '/meetings'
+            },
+            {
                 label: 'Calendar',
                 icon: 'pi pi-calendar',
                 routerLink: '/calendar'
@@ -32,11 +37,6 @@ export class Menu implements OnInit{
                 label: 'Map',
                 icon: 'pi pi-map',
                 routerLink: '/map'
-            },
-            {
-                label: 'Meetings',
-                icon: 'pi pi-briefcase',
-                routerLink: '/meetings'
             },
         ]
     }      

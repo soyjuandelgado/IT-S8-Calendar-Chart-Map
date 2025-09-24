@@ -4,6 +4,16 @@
     <article class="card-container">
         <p-card class="option-card">
             <ng-template #header>
+                <img class="card-image" alt="Meeting" src="reunion.jpg" />
+            </ng-template>
+            <ng-template #title>Meetings</ng-template>
+            <ng-template #subtitle>Update your meetings.</ng-template>
+            <ng-template #footer>
+                <p-button label="Show" severity="info" routerLink="/meetings"/>
+            </ng-template>
+        </p-card>
+        <p-card class="option-card">
+            <ng-template #header>
                 <!-- <i class="pi pi-calendar" style="font-size: 20rem;"></i> -->
                 <img class="card-image" alt="Calendar" src="calendario.webp" />
             </ng-template>
