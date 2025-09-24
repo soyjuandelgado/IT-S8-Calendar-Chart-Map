@@ -1,7 +1,7 @@
 <section class="section-container flex flex-col gap-3">
     <h1>Meetings</h1>
     <p>Meetings text</p>
-    <p-table [value]="meetings" [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table [value]="meetings()" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template #header>
             <tr>
                 <th>Name</th>
