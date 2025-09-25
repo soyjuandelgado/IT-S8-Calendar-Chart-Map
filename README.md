@@ -25,6 +25,7 @@
     - [11. Instalación de Express.js](#11-instalación-de-expressjs)
     - [12. Instalar TypeORM](#12-instalar-typeorm)
     - [13. Instalar Swagger](#13-instalar-swagger)
+    - [14. Instalar CORS](#14-instalar-cors)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
@@ -62,22 +63,37 @@ PENDIENTE
 
 ### 2. Crear base de datos con operaciones CRUD
 
-- Crear nuevo proyecto con Nest.js.
-- Crear API.
-- Crear controlador de usuarios.
-- Crear servicio de usuarios.
-- Crear DTO de usuarios.
-- Crear clase de usuarios.
-- Crear entidad de usuarios.
-- Conectar con Base de Datos MySQL.
-- Crear modulo de usuarios.
-- Crear variables de entorno.
-- Crear servicio de configuracion para variables de entorno.
-- Usar Base de Datos en Docker para guardar datos.
-- Comprobacion de la API con Postman.
-- Documentar API con Swagger
+- Backend:
+  - Crear nuevo proyecto con Nest.js.
+  - Crear API.
+  - Crear controlador de usuarios.
+  - Crear servicio de usuarios.
+  - Crear DTO de usuarios.
+  - Crear clase de usuarios.
+  - Crear entidad de usuarios.
+  - Conectar con Base de Datos MySQL.
+  - Crear modulo de usuarios.
+  - Crear variables de entorno.
+  - Crear servicio de configuracion para variables de entorno.
+  - Usar Base de Datos en Docker para guardar datos.
+  - Comprobacion de la API con Postman.
+  - Documentar API con Swagger
 
 <img src="frontend/public/ex2.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
+
+- Frontend:
+  - Añadir página `meetings`.
+  - Crear componente `dialog-form`.
+  - Crear `meetings-api-service` para conectarse con el backend.
+  - Crear `meetings-service`.
+  - Conectar `meetings` con servicios.
+  - Cargar datos de BD:
+    - en meetings.
+    - en calendar.
+  - Pasar datos de `meetings` a `dialog-form`.
+  - Gestionar CRUD en pantalla.
+
+<img src="frontend/public/ex2-frontend.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
 ## 💻Tecnologías Utilizadas
 
@@ -104,6 +120,7 @@ PENDIENTE
 - [x] Nest.js
 - [x] TypeORM
 - [x] Swagger
+- [x] CORS
 - [ ] Jest
 
 ## 📋Requisitos
@@ -203,6 +220,12 @@ npm install --save @nestjs/typeorm typeorm mysql
 
 ```bash
 npm install --save @nestjs/swagger swagger-ui-express
+```
+
+### 14. Instalar CORS
+
+```bash
+npm install cors
 ```
 
 

@@ -27,8 +27,9 @@
 - [ ] instalar playwright (se puede ejecutar ng e2e!)
 - [x] crear pantalla de CRUD
   - [x] cargar datos BD mediante API
-  - [ ] editar reunion
-  - [ ] borrar reunion
+  - [x] editar reunion
+  - [x] borrar reunion
+  - [ ] añadir confirmación de borrado.
 - [x] cargar datos BD en calendario
 - [ ] cargar datos BD en mapa
   - [ ] conectar map con el servicio
