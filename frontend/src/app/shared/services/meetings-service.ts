@@ -9,9 +9,10 @@ import { tap } from 'rxjs';
 export class MeetingsService {
   private api = inject(MeetingsApiService);
   private _meetings = signal<IMeeting[]>([]);
-  meeting: IMeeting | undefined = undefined;
+  private _meeting = signal<IMeeting | undefined>(undefined);
 
   public readonly meetings = this._meetings.asReadonly();
+  public readonly meeting = this._meeting.asReadonly();
 
   constructor() {
     this.getMeetings();
@@ -31,7 +32,7 @@ export class MeetingsService {
   getMeeting(id: number): void {
     this.api.getMeeting$(id).subscribe({
       next: (response) => {
-        this.meeting = response;
+        this._meeting.set(response);
       },
       error: (err) => {
         console.error('Error al obtener reunion', err);
@@ -57,34 +58,37 @@ export class MeetingsService {
   }
 
   updateMeeting(id: number, meeting: IMeeting): void {
-    this.api.updateMeeting$(id, meeting).pipe(
-      tap({
-        next: (response) => {
-          this._meetings.update(currentMeetings => 
-            currentMeetings.map(m => m.id === id ? response : m)
-          );
-        },
-        error: (err) => {
-          console.error('Error al actualizar la reunión', err);
-        }
-      })
-    ).subscribe();
+    this.api
+      .updateMeeting$(id, meeting)
+      .pipe(
+        tap({
+          next: (response) => {
+            this._meetings.update((currentMeetings) =>
+              currentMeetings.map((m) => (m.id === id ? response : m))
+            );
+          },
+          error: (err) => {
+            console.error('Error al actualizar la reunión', err);
+          },
+        })
+      )
+      .subscribe();
   }
 
   deleteMeeting(id: number): void {
-    this.api.deleteMeeting$(id).pipe(
-      tap({
-        next: () => {
-          // Usa el método 'update' para filtrar y eliminar la reunión
-          this._meetings.update(currentMeetings => 
-            currentMeetings.filter(m => m.id !== id)
-          );
-        },
-        error: (err) => {
-          console.error('Error al eliminar la reunión', err);
-        }
-      })
-    ).subscribe();
+    this.api
+      .deleteMeeting$(id)
+      .pipe(
+        tap({
+          next: () => {
+            // Usa el método 'update' para filtrar y eliminar la reunión
+            this._meetings.update((currentMeetings) => currentMeetings.filter((m) => m.id !== id));
+          },
+          error: (err) => {
+            console.error('Error al eliminar la reunión', err);
+          },
+        })
+      )
+      .subscribe();
   }
-
 }

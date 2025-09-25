@@ -11,8 +11,11 @@ export class MeetingsApiService {
   private http = inject(HttpClient);
 
   private toMeetingDto(meeting: IMeeting): IMeetingDto {
-    const date = meeting.date;
+    let date = meeting.date;
 
+    if (typeof date === 'string') {
+      date = new Date(date);
+    }
     // Obtener año, mes y día de la fecha
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Sumamos 1 y aseguramos dos dígitos
@@ -44,11 +47,11 @@ export class MeetingsApiService {
     return this.http.post<IMeeting>(environment.MEETINGS_API_URL, dto);
   }
 
-  updateMeeting$(id:number, meeting: IMeeting) {
+  updateMeeting$(id: number, meeting: IMeeting) {
     const dto: IMeetingDto = this.toMeetingDto(meeting);
     return this.http.put<IMeeting>(environment.MEETINGS_API_URL + id, dto);
   }
-  
+
   deleteMeeting$(id: number) {
     return this.http.delete<IMeeting>(environment.MEETINGS_API_URL + id);
   }

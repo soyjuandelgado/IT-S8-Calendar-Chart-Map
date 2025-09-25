@@ -19,18 +19,18 @@ export class Meetings {
 
   showForm() {
     const meeting: IMeeting = {
-      id:0,
+      id: 0,
       name: '',
       phone: '',
       date: new Date(),
       longitude: 0,
-      latitude: 0,      
-    }
+      latitude: 0,
+    };
     this.dialogForm.showDialog(meeting);
   }
 
   saveMeeting(meeting: IMeeting) {
-    console.log(meeting)
+    console.log(meeting);
     if (meeting.id !== 0) {
       this.service.updateMeeting(meeting.id, meeting);
     } else {
@@ -46,29 +46,22 @@ export class Meetings {
   addMeeting() {
     const meeting: IMeeting = {
       id: 0,
-      name: 'Prueba',
-      phone: '123456789',
-      date: new Date('1900-01-01'),
-      longitude: 2.684346453,
-      latitude: 40.3548648153,
+      name: '',
+      phone: '',
+      date: new Date(),
+      longitude: 0,
+      latitude: 0,
     };
-
-    this.service.addMeeting(meeting);
+    this.dialogForm.showDialog(meeting);
   }
 
   updateMeeting(id: number) {
-    const meeting: IMeeting = {
-      id: id,
-      name: 'Modificado',
-      phone: '123456789',
-      date: new Date('2000-01-01'),
-      longitude: 2.684346453,
-      latitude: 40.3548648153,
-    };
-    this.service.updateMeeting(id, meeting);
+    const meeting = this.meetings().find((m) => m.id === id);
+    if (meeting) this.dialogForm.showDialog(meeting);
+    else console.error('Reunión no encontrada');
   }
 
   deleteMeeting(id: number) {
-      this.service.deleteMeeting(id);
+    this.service.deleteMeeting(id);
   }
 }
