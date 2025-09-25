@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { MeetingsService } from '../shared/services/meetings-service';
 @Component({
   selector: 'app-calendar',
   imports: [FullCalendarModule],
   templateUrl: './calendar.html',
-  styleUrl: './calendar.css'
+  styleUrl: './calendar.css',
 })
 export class Calendar {
+  service = inject(MeetingsService);
+  meetings = this.service.meetings;
+
+  calendarEvents = computed(() => {
+    return this.meetings().map((meeting) => ({
+      title: meeting.name,
+      date: meeting.date,
+    }));
+  });
+
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, interactionPlugin],
     weekends: true, // mostrar fines de semana
-    events: [
-      { title: 'Evento 1', date: '2025-09-17' },
-      { title: 'Evento 2', date: '2025-09-18' },
-    ],
+    events: this.calendarEvents(),
   };
 }

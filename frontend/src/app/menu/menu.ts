@@ -19,6 +19,11 @@ export class Menu implements OnInit{
                 routerLink: '/home'
             },
             {
+                label: 'Meetings',
+                icon: 'pi pi-briefcase',
+                routerLink: '/meetings'
+            },
+            {
                 label: 'Calendar',
                 icon: 'pi pi-calendar',
                 routerLink: '/calendar'
