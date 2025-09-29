@@ -31,8 +31,12 @@
   - [x] borrar reunion
   - [ ] añadir confirmación de borrado.
 - [x] cargar datos BD en calendario
+  - [x] añadir evento
+  - [x] modificar evento
+  - [ ] eliminar evento
 - [ ] cargar datos BD en mapa
   - [ ] conectar map con el servicio
   - [ ] pasar datos a mapbox-map por signal
+  - [ ] sacar API key a environment
 - [x] crear rutas de los componentes
 - [x] añadir enlaces en el menu

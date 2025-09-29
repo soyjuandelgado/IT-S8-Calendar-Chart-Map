@@ -31,8 +31,6 @@ export class Calendar {
   });
 
   handleDateClick = (arg: any) => {
-    // Lógica para crear un nuevo evento
-    console.log('Date clicked:', arg.date);
     this.addMeeting(arg.date);
   };
 
