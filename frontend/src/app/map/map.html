@@ -1,5 +1,6 @@
 <section class="section-container">
     <h1>Map</h1>
     <p>Locate your meetings in a few seconds.</p>
-    <app-mapbox-map [locations] = "meetings()"></app-mapbox-map>
+    <app-mapbox-map [locations] = "meetings()" (mapClick)="onMapClick($event)"></app-mapbox-map>
+    <app-dialog-form #dialogForm (save)="saveMeeting($event)"></app-dialog-form>
 </section>

@@ -7,6 +7,7 @@ import {
   input,
   OnDestroy,
   OnInit,
+  output,
   PLATFORM_ID,
   signal,
   ViewChild,
@@ -28,6 +29,7 @@ export class MapboxMap implements OnInit, OnDestroy {
   private mapboxglInstance: typeof mapboxgl | undefined;
   private platformId = inject(PLATFORM_ID);
   mapIsReady = signal(false);
+  mapClick = output<{ latitude: number; longitude: number }>();
 
   async ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -42,6 +44,12 @@ export class MapboxMap implements OnInit, OnDestroy {
         // center: [2.17795188, 41.38825991], //Barcelona
         // zoom: 12, // Initial zoom level
       });
+
+      this.map.on('click', (e) => {
+        const { lng, lat } = e.lngLat;
+        this.mapClick.emit({ latitude: lat, longitude: lng });
+      });
+
       this.mapIsReady.set(true);
     }
   }
@@ -58,13 +66,12 @@ export class MapboxMap implements OnInit, OnDestroy {
         const locations = this.locations();
         if (locations) {
           locations.forEach((location) => {
+            const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+              `<h3>${location.name}</h3><h4>${location.date}</h4><p>Teléfono: ${location.phone}</p>`
+            );
             const marker = new this.mapboxglInstance!.Marker()
               .setLngLat([location.longitude, location.latitude])
-              .setPopup(
-                new mapboxgl.Popup({ offset: 25 }).setHTML(
-                  `<h3>${location.name}</h3><h4>${location.date}</h4><p>Teléfono: ${location.phone}</p>`
-                )
-              )
+              .setPopup(popup)
               .addTo(this.map!);
             this.markers.push(marker);
           });
