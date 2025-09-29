@@ -13,7 +13,6 @@ import { IMeeting } from '../shared/models/imeeting';
 })
 export class Meetings {
   @ViewChild('dialogForm') dialogForm!: DialogForm;
-  delete = false;
   service = inject(MeetingsService);
   meetings = this.service.meetings;
 
