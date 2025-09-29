@@ -36,7 +36,6 @@ export class MapboxMap implements OnInit, OnDestroy {
       // SSR check to ensure this runs in the browser as GL JS requires a browser environment
       this.mapboxglInstance = (await import('mapbox-gl')).default; // dynamically import mapbox-gl as the default export
 
-      // Create a new map instance
       this.map = new this.mapboxglInstance.Map({
         accessToken:
           'pk.eyJ1Ijoic295anVhbmRlbGdhZG8iLCJhIjoiY21mbWZ6ZmFzMDF0djJqcXp5MmF6bnkxeiJ9.4MxEetjDrbZZsM2zPp0gDw',
@@ -46,8 +45,14 @@ export class MapboxMap implements OnInit, OnDestroy {
       });
 
       this.map.on('click', (e) => {
-        const { lng, lat } = e.lngLat;
-        this.mapClick.emit({ latitude: lat, longitude: lng });
+        const clickedOnMarker = (e.originalEvent.target as HTMLElement)?.closest(
+          '.mapboxgl-marker'
+        );
+
+        if (!clickedOnMarker) {
+          const { lng, lat } = e.lngLat;
+          this.mapClick.emit({ latitude: lat, longitude: lng });
+        }
       });
 
       this.mapIsReady.set(true);
