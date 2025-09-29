@@ -35,6 +35,12 @@ export class Map {
     }
   }
 
+  updateMeeting(id: number) {
+    const meeting = this.meetings().find((m) => m.id === id);
+    if (meeting) this.dialogForm.showDialog(meeting);
+    else console.error('Reunión no encontrada');
+  }
+  
   deleteMeeting(id: number) {
     this.service.deleteMeeting(id);
   }  
