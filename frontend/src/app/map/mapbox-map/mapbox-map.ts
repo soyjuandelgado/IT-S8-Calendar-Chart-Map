@@ -60,6 +60,11 @@ export class MapboxMap implements OnInit, OnDestroy {
           locations.forEach((location) => {
             const marker = new this.mapboxglInstance!.Marker()
               .setLngLat([location.longitude, location.latitude])
+              .setPopup(
+                new mapboxgl.Popup({ offset: 25 }).setHTML(
+                  `<h3>${location.name}</h3><h4>${location.date}</h4><p>Teléfono: ${location.phone}</p>`
+                )
+              )
               .addTo(this.map!);
             this.markers.push(marker);
           });
