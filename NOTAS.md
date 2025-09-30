@@ -42,5 +42,7 @@
   - [ ] opcion drag para modificar localización de un evento
   - [ ] sacar plantilla popup a otro componente
   - [ ] centrar mapa y hacer zoom para que se vean todos los eventos
+- [x] cargar BD en grafico de barras
+- [x] cargar BD en gráfico de lineas
 - [x] crear rutas de los componentes
 - [x] añadir enlaces en el menu
