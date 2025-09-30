@@ -20,7 +20,6 @@
 - [x] instalar mapbox para front
 - [x] instalar chartjs? - dentro de primeng
 - [x] instalar FullCalendar
-- [ ] configurar vercel para ejecutar ambos proyectos
 - [ ] css
   - [ ] fuentes
   - [ ] colores
@@ -35,8 +34,13 @@
   - [x] modificar evento
   - [ ] eliminar evento
 - [ ] cargar datos BD en mapa
-  - [ ] conectar map con el servicio
-  - [ ] pasar datos a mapbox-map por signal
-  - [ ] sacar API key a environment
+  - [x] conectar map con el servicio
+  - [x] pasar datos a mapbox-map por signal
+  - [x] sacar API key a environment
+  - [x] añadir evento
+  - [x] editar evento
+  - [ ] opcion drag para modificar localización de un evento
+  - [ ] sacar plantilla popup a otro componente
+  - [ ] centrar mapa y hacer zoom para que se vean todos los eventos
 - [x] crear rutas de los componentes
 - [x] añadir enlaces en el menu

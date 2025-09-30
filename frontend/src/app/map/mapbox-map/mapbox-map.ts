@@ -13,6 +13,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import mapboxgl, { Marker } from 'mapbox-gl';
+import { environment } from '../../../environments/environment';
 
 interface ILocation {
   id: number;
@@ -45,8 +46,7 @@ export class MapboxMap implements OnInit, OnDestroy {
       this.mapboxglInstance = (await import('mapbox-gl')).default; // dynamically import mapbox-gl as the default export
 
       this.map = new this.mapboxglInstance.Map({
-        accessToken:
-          'pk.eyJ1Ijoic295anVhbmRlbGdhZG8iLCJhIjoiY21mbWZ6ZmFzMDF0djJqcXp5MmF6bnkxeiJ9.4MxEetjDrbZZsM2zPp0gDw',
+        accessToken: environment.MAPBOX_API_TOKEN,
         container: this.mapContainer.nativeElement, // Reference to the map container element
         // center: [2.17795188, 41.38825991], //Barcelona
         // zoom: 12, // Initial zoom level
@@ -96,14 +96,6 @@ export class MapboxMap implements OnInit, OnDestroy {
     this.markers.forEach((marker) => marker.remove());
     this.markers = [];
   }
-
-  // //Añadir meetingId 
-  // private createPopupContent(location: any): string {
-  //   return `<h3>${location.name}</h3>
-  //           <h4>${location.date}</h4>
-  //           <p>Teléfono: ${location.phone}</p>
-  //           <button>Edit</button>`;
-  // }
 
   private createPopupContent(location: ILocation): HTMLElement {
     const container = document.createElement('div');

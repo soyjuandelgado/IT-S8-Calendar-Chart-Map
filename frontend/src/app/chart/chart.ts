@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
+import { MeetingsService } from '../shared/services/meetings-service';
+import { IMeeting } from '../shared/models/imeeting';
 
 @Component({
   selector: 'app-chart',
@@ -8,16 +10,40 @@ import { ChartModule } from 'primeng/chart';
   styleUrl: './chart.css',
 })
 export class Chart {
-  basicData = {
-    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-    datasets: [
-      {
-        label: 'Ventas 2024',
-        backgroundColor: '#42A5F5',
-        data: [65, 59, 80, 81],
-      },
-    ],
-  };
+  service = inject(MeetingsService);
+  meetings = this.service.meetings;
+
+  chartData = computed(() => {
+    const meetings = this.meetings();
+    const daysOfWeek = [
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+      'Sunday',
+    ];
+    const data = new Array(7).fill(0);
+
+    meetings.forEach((meetings: IMeeting) => {
+      const date = new Date(meetings.date);
+      const dayIndex = (date.getDay() + 6) % 7;
+      data[dayIndex]++;
+    });
+
+    return{
+      labels: daysOfWeek,
+      datasets: [
+        {
+          label: 'Events for Day of Week',
+          backgroundColor: '#42A5F5',
+          data: data,
+        }
+      ]
+    }
+  });
+
   options = {
     plugins: {
       legend: {
@@ -27,7 +53,7 @@ export class Chart {
       },
       title: {
         display: true,
-        text: 'Ventas Trimestrales',
+        text: 'Events for Week',
         color: '#333',
       },
     },
