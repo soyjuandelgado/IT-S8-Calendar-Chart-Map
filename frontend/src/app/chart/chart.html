@@ -1,5 +1,6 @@
 <section class="section-container">
     <h1>Chart</h1>
-    <p>Chart text</p>
-    <p-chart type="bar" [data]="basicData" [options]="options"></p-chart>
+    <p>Your events distribution.</p>
+    <p-chart type="bar" [data]="chartDataWeek()" [options]="optionsWeek"></p-chart>
+    <p-chart type="line" [data]="chartDataMonth()" [options]="optionsMonth"></p-chart>
 </section>

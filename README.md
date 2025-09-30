@@ -7,6 +7,7 @@
   - [📄Descripción](#descripción)
     - [1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa](#1-crear-componentes-menú-home-calendario-gráfico-y-mapa)
     - [2. Crear base de datos con operaciones CRUD](#2-crear-base-de-datos-con-operaciones-crud)
+    - [3. Cargar y modificar datos en Mapa, Calendario y Graficos](#3-cargar-y-modificar-datos-en-mapa-calendario-y-graficos)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
     - [Frontend](#frontend)
     - [BackEnd](#backend)
@@ -95,6 +96,25 @@ PENDIENTE
 
 <img src="frontend/public/ex2-frontend.png" width="400" style="margin-top: 1rem; margin-bottom: 1rem;">
 
+### 3. Cargar y modificar datos en Mapa, Calendario y Graficos
+
+- Enlace de `meetings-service` con:
+  - componente `map` y `mapbox-map`
+  - componente `chart`
+  - componente `calendar`
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="frontend/public/ex3-meetings.png" width="400" style="vertical-align: top;">
+  <img src="frontend/public/ex3-map.png" width="400" style="vertical-align: top;">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="frontend/public/ex3-bar-chart.png" width="400" style="vertical-align: top;">
+  <img src="frontend/public/ex3-line-chart.png" width="400" style="vertical-align: top;">
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 1rem;">
+  <img src="frontend/public/ex3-calendar.png" width="400" style="vertical-align: top;">
+</div>
+
 ## 💻Tecnologías Utilizadas
 
 PENDIENTE
@@ -130,7 +150,7 @@ PENDIENTE
 - Navegador web
 - Node.js
 - Angular
-- Firebase
+- MySQL
   
 ## 🛠️Instalación
 
