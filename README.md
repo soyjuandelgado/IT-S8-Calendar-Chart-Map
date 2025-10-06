@@ -27,6 +27,7 @@
     - [12. Instalar TypeORM](#12-instalar-typeorm)
     - [13. Instalar Swagger](#13-instalar-swagger)
     - [14. Instalar CORS](#14-instalar-cors)
+    - [15. Instalar Docker](#15-instalar-docker)
     - [5. Instalación de Firebase](#5-instalación-de-firebase)
       - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
   - [▶️Ejecución](#️ejecución)
@@ -141,6 +142,7 @@ PENDIENTE
 - [x] TypeORM
 - [x] Swagger
 - [x] CORS
+- [x] Docker
 - [ ] Jest
 
 ## 📋Requisitos
@@ -151,6 +153,7 @@ PENDIENTE
 - Node.js
 - Angular
 - MySQL
+- Docker
   
 ## 🛠️Instalación
 
@@ -222,6 +225,7 @@ npm install chart.js
 
 ```bash
 npm i -g @nestjs/cli
+npm install --save-dev @nestjs/cli
 ```
 
 ### 11. Instalación de Express.js
@@ -248,6 +252,10 @@ npm install --save @nestjs/swagger swagger-ui-express
 npm install cors
 ```
 
+### 15. Instalar Docker
+
+Seguir los pasos de la instalación oficial:
+[Docker.com](https://www.docker.com/products/docker-desktop/)
 
 
 ### 5. Instalación de Firebase
@@ -299,6 +307,13 @@ ng test
 
 ```shell
 npm run start
+```
+
+o con contenedores:
+
+```shell
+  cd backend
+  docker-compose up --build -d
 ```
 
 ## 📸 Demo

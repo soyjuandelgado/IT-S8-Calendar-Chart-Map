@@ -1,0 +1,14 @@
+# Carpetas y archivos a ignorar
+
+# Directorios generados por NestJS y Node.js
+node_modules
+dist
+.env
+
+# Archivos de control de versiones
+.git
+.gitignore
+
+# Archivos de depuración y logs
+npm-debug.log*
+yarn-error.log*
