@@ -1,0 +1,16 @@
+.card-container{
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.option-card{
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image{
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+}

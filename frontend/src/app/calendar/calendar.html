@@ -1,0 +1,6 @@
+<section class="section-container">
+    <h1>Calendar</h1>
+    <p>Calendar with all your events.</p>
+    <full-calendar [options]="calendarOptions" [events]="calendarEvents()"></full-calendar>
+    <app-dialog-form #dialogForm (save)="saveMeeting($event)"></app-dialog-form>
+</section>

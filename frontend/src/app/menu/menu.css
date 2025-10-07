@@ -1,0 +1,9 @@
+h3 {
+  padding-right: 1rem;
+}
+.menu-component {
+  border-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(15, 64, 87, 0.1);
+  background: white;
+}

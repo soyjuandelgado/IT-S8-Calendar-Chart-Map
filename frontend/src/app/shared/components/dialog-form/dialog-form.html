@@ -1,0 +1,28 @@
+<div class="card flex justify-center">
+    <p-dialog header="Meeting" [modal]="true" [(visible)]="visible" [formGroup]="meetingForm">
+        <div class="flex items-center gap-4 mb-4">
+            <label for="name" class="font-semibold w-24">Name</label>
+            <input pInputText id="name" class="flex-auto" autocomplete="off" formControlName="name" />
+        </div>
+        <div class="flex items-center gap-4 mb-8">
+            <label for="phone" class="font-semibold w-24">Phone</label>
+            <input pInputText pKeyFilter="int" id="phone" class="flex-auto" autocomplete="off" formControlName="phone" />
+        </div>
+        <div class="flex gap-4 mb-8">
+            <label for="date" class="font-semibold w-24 self-start">Date</label>
+            <p-date-picker fluid="true" id="date" dateFormat="yy-mm-dd" [firstDayOfWeek]=1 [inline]="true" class="flex-auto self-end" autocomplete="off" formControlName="date" />
+        </div>
+        <div class="flex items-center gap-4 mb-8">
+            <label for="longitude" class="font-semibold w-24">Longitude</label>
+            <p-inputnumber id="longitude" class="flex-auto" mode="decimal" [min]=0 [max]=180 minFractionDigits="8" maxFractionDigits="8" autocomplete="off" formControlName="longitude" />
+        </div>
+        <div class="flex items-center gap-4 mb-8">
+            <label for="latitude" class="font-semibold w-24">Latitude</label>
+            <p-inputnumber id="latitude" class="flex-auto" mode="decimal" [min]=0 [max]=90 minFractionDigits="8" maxFractionDigits="8" autocomplete="off" formControlName="latitude" />
+        </div>
+        <div class="flex justify-end gap-2">
+            <p-button label="Cancel" severity="secondary" (click)="visible = false" />
+            <p-button label="Save" (click)="onSave()" />
+        </div>
+    </p-dialog>
+</div>
