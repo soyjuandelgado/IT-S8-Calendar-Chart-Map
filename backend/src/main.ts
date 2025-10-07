@@ -2,7 +2,20 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
+
+// async function createDatabaseIfNotExists() {
+//   const connection = await mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'tu_password',
+//   });
+//   await connection.query(`CREATE DATABASE IF NOT EXISTS meetings CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;`);
+//   await connection.end();
+// }
+
 async function bootstrap() {
+  // await createDatabaseIfNotExists();
+
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
 

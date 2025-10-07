@@ -30,6 +30,9 @@ USER nestuser
 # Establece el directorio de trabajo
 WORKDIR /usr/src/app
 
+#copia el script de BD
+COPY bd.sql ./
+
 # Copia SÓLO los archivos de definición de dependencias
 COPY package.json package-lock.json ./
 
