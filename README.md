@@ -8,6 +8,7 @@
     - [1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa](#1-crear-componentes-menú-home-calendario-gráfico-y-mapa)
     - [2. Crear base de datos con operaciones CRUD](#2-crear-base-de-datos-con-operaciones-crud)
     - [3. Cargar y modificar datos en Mapa, Calendario y Graficos](#3-cargar-y-modificar-datos-en-mapa-calendario-y-graficos)
+    - [4. Contenedores](#4-contenedores)
   - [💻Tecnologías Utilizadas](#tecnologías-utilizadas)
     - [Frontend](#frontend)
     - [BackEnd](#backend)
@@ -27,8 +28,7 @@
     - [12. Instalar TypeORM](#12-instalar-typeorm)
     - [13. Instalar Swagger](#13-instalar-swagger)
     - [14. Instalar CORS](#14-instalar-cors)
-    - [5. Instalación de Firebase](#5-instalación-de-firebase)
-      - [5.1 Instalar Firebase en el proyecto](#51-instalar-firebase-en-el-proyecto)
+    - [15. Instalar Docker](#15-instalar-docker)
   - [▶️Ejecución](#️ejecución)
     - [Frontend](#frontend-1)
       - [Testing](#testing)
@@ -115,6 +115,15 @@ PENDIENTE
   <img src="frontend/public/ex3-calendar.png" width="400" style="vertical-align: top;">
 </div>
 
+### 4. Contenedores
+
+- Crear contenedor para BD.
+- Crear Dockerfile del backend.
+- Crear Docker Compose de ambos.
+- Comprobar si la BD está vacía y añadirle un seed.
+
+<img src="frontend/public/ex4.png" width="800" style="margin-top: 1rem; margin-bottom: 1rem;"> 
+
 ## 💻Tecnologías Utilizadas
 
 PENDIENTE
@@ -141,16 +150,16 @@ PENDIENTE
 - [x] TypeORM
 - [x] Swagger
 - [x] CORS
+- [x] Docker
 - [ ] Jest
 
 ## 📋Requisitos
 
-PENDIENTE
-
 - Navegador web
 - Node.js
 - Angular
-- MySQL
+- MySQL (puede estar en Docker)
+- Docker
   
 ## 🛠️Instalación
 
@@ -222,6 +231,7 @@ npm install chart.js
 
 ```bash
 npm i -g @nestjs/cli
+npm install --save-dev @nestjs/cli
 ```
 
 ### 11. Instalación de Express.js
@@ -248,38 +258,10 @@ npm install --save @nestjs/swagger swagger-ui-express
 npm install cors
 ```
 
+### 15. Instalar Docker
 
-
-### 5. Instalación de Firebase
-
-```shell
-npm install -g firebase-tools
-```
-
-Hacer login en firebase:
-
-```bash
-firebase login
-```
-
-#### 5.1 Instalar Firebase en el proyecto
-
-```bash
-ng add @angular/fire
-```
-
-Si da errores, se puede forzar la instalación
-
-```bash
-npm install @angular/fire --legacy-peer-deps
-```
-
-Si continúa fallando actualizar el sistema:
-
-```bash
-npm install -g @angular/cli@latest
-ng update @angular/cli @angular/core
-```
+Seguir los pasos de la instalación oficial:
+[Docker.com](https://www.docker.com/products/docker-desktop/)
 
 ## ▶️Ejecución
 
@@ -299,6 +281,13 @@ ng test
 
 ```shell
 npm run start
+```
+
+o con contenedores:
+
+```shell
+  cd backend
+  docker-compose up --build -d
 ```
 
 ## 📸 Demo

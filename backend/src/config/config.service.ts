@@ -31,6 +31,9 @@ class ConfigService {
 
       entities: ['dist/**/*.entity.js'],
       synchronize: true,
+      extra: {
+        multipleStatements: true,
+      },
     };
   }
 }

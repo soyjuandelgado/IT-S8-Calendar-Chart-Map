@@ -1,0 +1,45 @@
+services:
+  # 1. SERVICIO DE BASE DE DATOS
+  db:
+    image: mysql:5.7 # O la versión que necesites
+    container_name: mysql_db
+    restart: always
+    # Carga las variables secretas de la BD desde .env.db
+    env_file:
+      - .env.db 
+    ports:
+      # Opcional: Para acceder a la BD desde tu máquina local
+      - "3306:3306" 
+    environment:
+      MYSQL_DEFAULT_AUTHENTICATION_PLUGIN: mysql_native_password
+
+  # 2. SERVICIO DE LA APLICACIÓN NESTJS
+  app:
+    build: . # Esto usa tu Dockerfile
+    image: mi-app-nestjs
+    container_name: nest-app-container
+    restart: always
+    ports:
+      - "3000:3000" 
+
+    # Carga TODAS las variables para NestJS desde .env
+    env_file:
+      - .env.production.docker
+     
+    depends_on:
+      # Asegura que la BD intente arrancar primero
+      - db
+
+
+
+    # 🎯 ¡Aquí inyectamos las variables de entorno! 🎯
+    # ----------------------------------------------------
+    # Opción A: Usar un archivo .env externo (Recomendado)
+    # env_file:
+    #   - .env.production.docker
+      
+    # Opción B (alternativa): Definirlas directamente
+    # environment:
+    #   NODE_ENV: production
+    #   MEETINGS_HOST: http://external-service.com
+    #   OTRA_VARIABLE: valor
