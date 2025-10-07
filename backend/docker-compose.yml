@@ -20,7 +20,7 @@ services:
     container_name: nest-app-container
     restart: always
     ports:
-      - "8080:3000" 
+      - "3000:3000" 
 
     # Carga TODAS las variables para NestJS desde .env
     env_file:
