@@ -38,8 +38,6 @@
 
 ## 📄Descripción
 
-PENDIENTE
-
 ### 1. Crear componentes Menú, Home, Calendario, Gráfico y Mapa
 
 - Instalación y configuración de todos los componentes.
@@ -126,8 +124,6 @@ PENDIENTE
 
 ## 💻Tecnologías Utilizadas
 
-PENDIENTE
-
 ### Frontend
 
 - [x] HTML
@@ -162,8 +158,6 @@ PENDIENTE
 - Docker
   
 ## 🛠️Instalación
-
-PENDIENTE
 
 ### 1. Descargar el repositorio
 
@@ -292,7 +286,7 @@ o con contenedores:
 
 ## 📸 Demo
 
-Visitar la web: [Web](https://it-s8-calendar-chart-map.vercel.app/)
+No está puesto en producción.
 
 ### Documentación API
 
