@@ -3,7 +3,6 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Meeting } from 'src/meetings/meeting.entity';
 import { Repository } from 'typeorm';
 import * as fs from 'fs';
-import * as path from 'path';
 
 @Injectable()
 export class SeedService implements OnModuleInit {

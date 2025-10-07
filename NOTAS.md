@@ -6,8 +6,8 @@
 - [x] instalar nest para back: utiliza express
 - [x] dockerizar nest
 - [ ] desplegar en ECS https://aws.amazon.com/es/ecs/
-- [ ] unir bd y nest con docker compose
-- [ ] crear bd con datos de ejemplo (SEED)
+- [x] unir bd y nest con docker compose
+- [x] crear bd con datos de ejemplo (SEED)
 - [ ] vigilar con variables de entorno para que no queden expuestas
 - [ ] se puede hacer deploy en firebase. primero hay que hacer el build del proyecto.
 
